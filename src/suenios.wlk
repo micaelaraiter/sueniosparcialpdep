@@ -5,7 +5,7 @@ class Suenio{
 class RecibirseDeLaCarrera inherits Suenio {
 	const property nivelDeFelicidad
 	   override method  sePuedeRealizarElSuenio(persona){
-	   	  self.validarQueNoSeHayaRecividoDeLaCarrera(persona)
+	   	  self.validarQueNoSeHayaRecibidoDeLaCarrera(persona)
 	   	  self.validarQueQuiereLaCarrera(persona)
 	   }
 	
@@ -14,7 +14,7 @@ class RecibirseDeLaCarrera inherits Suenio {
 				throw new Exception(message = "No queria la carrera")
 			}
 		}
-		method validarQueNoSeHayaRecividoDeLaCarrera(persona){
+		method validarQueNoSeHayaRecibidoDeLaCarrera(persona){
 			if(persona.sueniosCumplidos().contains(self)){
 				throw new Exception(message = "No queria la carrera")
 			}
